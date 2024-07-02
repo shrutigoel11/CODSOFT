@@ -1,123 +1,139 @@
-body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
+*{
     padding: 0;
-  }
-  
-  header {
-    background-color: #f8f8f8;
-    padding: 20px 0;
-  }
-  
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  
-  nav ul {
-    
-    font-family: 'Courier New', Courier, monospace;
-    font-size: larger;
-    font-weight: 200;
-    list-style: none;
     margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-   
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  nav a {
-    margin-right: 20px;
-    padding: 10px;
-    background-color: rgb(255, 184, 223);
-    border-radius: 1rem;
-    text-decoration: none;
-    color: #333;
-  }
-  a{
-    text-decoration:none;
-    color: #fff;
-  }
-  
-  .logo {
-    font-size: 2em;
-    font-weight: bold;
-    color: #333;
-  }
-  .logo img{
-    
-    width:250px;
-    height:150px;
-  }
-  
-  .hero {
-    
-    width:100vw;
-    height:480px;
-    background-image: url("background.webp"); 
+}
+body{
     background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-  }
-  .container{
-    display:flex;
-    justify-content: space-between;
-    align-content: center;
-  }
-
-  .container img{
-   
-    margin-left: 10rem;
-    border-bottom-left-radius: 3rem;
-    border-top-right-radius: 3rem;
-  }
- .imge{
-    margin-top:-36%;
-    margin-left: 60%;
-    height:675px;
-    align-content: center;
-    border-radius:   50% 0 0 50%;
-    background-color: rgb(255, 178, 204);
-  }
-  .hero h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-  }
-  
-  .cta {
-    margin-left: -40%;
+    background-image: url("image2.jpeg");
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* Header */
+.navbar{
+    height:60px;
     display: flex;
-    justify-content: center;
-  }
-  
-  .cta a {
-    margin-top: 50px;
-    margin-right: 20px;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgb(127, 197, 255);
-    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 1);
     
-  } 
-  a:hover{
-    text-transform: uppercase;
-    color: plum;
-  } 
+}
+.items ul li {
+    display: inline;
+    margin-left:100px;
+    margin-right: 10px;
+    font-size: medium;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:hover{
+    text-decoration: underline;
+}
+a{
+    
+    text-decoration: none;
+    color:white;
+}
+/* Section */
+section{
+    display: flex;
+}
+.box1{
+    margin-left: 2rem;;
+}
+.headline{
+    margin-top: 150px;
+    font-size:40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color :white;
+}
+.headline {
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeIn 2s forwards; /* Animation duration 1 second */
+    animation-delay: 1s; 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.subheading{
+    color:white;
+    margin-top: 2rem;
+}
+.offer{
+    margin-top: 2rem;
+    margin-left:0.2rem ;
+    padding:0.3rem;
+    width:160px;
+    background-color: rgba(25, 25, 25, 0.665);
+    color:white;
+    border:1px solid rgba(25, 25, 25, 0.465);
+}
+.buttons{
+    display: flex;
+    margin-left: 0.1rem;
+}
+.button1 button{
+    margin-top: 1.5rem;
+    width:250px;
+    height:40px;
+    background-color: black;
+    color: white;
+    border:2px solid black;
+    border-radius: 2rem;
+    font-size: medium;
+}
+.button2 button{
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    width:250px;
+    height:40px;
+    background-color: black;
+    color: white;
+    border:2px solid black;
+    border-radius: 2rem;
+    font-size: medium;
+}
+button:hover{
+    border-color: rgba(245, 245, 220, 0.701);
+}
+.box2{
+    margin-top: 2rem;
+    margin-left: 25%;
+    align-content: end;
+
+}
+.box2 {
+    position: relative; /* Ensure positioning context */
+    left: -100%; /* Start off-screen to the left */
+    animation: slideIn 1s forwards; /* Animation duration 1 second */
+    animation-delay: 2s; /* Delay the animation by 2 seconds */
+}
+
+@keyframes slideIn {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 0; /* Slide in to the original position */
+    }
+}
+/*Footer*/
+footer p{
+    margin: 2rem;
+    color:white;
+
+}
+footer p a{
+    text-decoration: underline;
+}
+.footpart{
+    font-size: smaller;
+    margin-left:2rem ;
+    margin-top: 8%;
+}
+
